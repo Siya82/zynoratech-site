@@ -164,9 +164,16 @@ section{padding:100px 0;position:relative}
 .feature .ic svg{width:20px;height:20px}
 .feature h3{font-size:1.05rem;margin-bottom:6px}
 .feature p{color:var(--muted);font-size:.93rem;margin:0}
-.runner-sw{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;margin-bottom:16px;background:var(--top);box-shadow:0 0 0 2px color-mix(in srgb,var(--bolt) 55%,transparent),0 0 18px color-mix(in srgb,var(--bolt) 35%,transparent)}
-.runner-sw svg{width:20px;height:20px;color:var(--bolt)}
-.feature .unlock{display:inline-block;margin-top:10px;font-size:.78rem;letter-spacing:.04em;color:var(--c,var(--cyan))}
+.runners{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.runner{margin:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden;border-top:2px solid var(--a)}
+.runner-img{height:320px;display:flex;justify-content:center;align-items:flex-end;padding-top:12px;overflow:hidden;background:radial-gradient(60% 55% at 50% 60%,color-mix(in srgb,var(--a) 22%,transparent),transparent 70%),radial-gradient(90% 70% at 50% 100%,color-mix(in srgb,var(--p) 55%,transparent),transparent 75%)}
+.runner-img img{height:100%;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(0,0,0,.55))}
+.runner figcaption{padding:20px 24px 24px}
+.runner h3{font-size:1.15rem;margin-bottom:2px}
+.runner .runner-tag{color:var(--a);font-size:.85rem;margin:0 0 8px}
+.runner p{color:var(--muted);font-size:.93rem;margin:0}
+.feature .unlock,.runner .unlock{display:inline-block;margin-top:10px;font-size:.78rem;letter-spacing:.04em;color:var(--c,var(--cyan))}
+.runner .unlock{color:var(--a)}
 .feature .n{font-weight:200;font-size:2.6rem;line-height:1;color:var(--c,var(--cyan));margin-bottom:10px}
 
 /* thutora family */
@@ -255,7 +262,7 @@ section{padding:100px 0;position:relative}
 /* responsive */
 @media (max-width:1000px){
   .products,.pillars,.features{grid-template-columns:1fr 1fr}
-  .features.four,.family{grid-template-columns:1fr 1fr}
+  .features.four,.family,.runners{grid-template-columns:1fr 1fr}
   .roadmap{grid-template-columns:repeat(3,1fr)}
   .phase:nth-child(3){border-right:0}
   .phase:nth-child(-n+3){border-bottom:1px solid var(--line)}
@@ -280,7 +287,7 @@ section{padding:100px 0;position:relative}
 }
 @media (max-width:640px){
   .wrap{padding:0 16px}
-  .products,.pillars,.features,.features.four,.family{grid-template-columns:1fr}
+  .products,.pillars,.features,.features.four,.family,.runners{grid-template-columns:1fr}
   .roadmap{grid-template-columns:1fr}
   .phase{border-right:0;border-bottom:1px solid var(--line)}
   .phase:last-child{border-bottom:0}
@@ -293,3 +300,4 @@ section{padding:100px 0;position:relative}
   .mock-row .kpi:last-child{grid-column:1/-1}
   .brand .wm b{font-size:.86rem;letter-spacing:.26em}
 }
+@media (max-width:640px){.runners{grid-template-columns:1fr 1fr;gap:12px}.runner-img{height:210px}.runner figcaption{padding:14px}.runner h3{font-size:1rem}.runner p{font-size:.85rem}}
