@@ -301,3 +301,8 @@ section{padding:100px 0;position:relative}
   .brand .wm b{font-size:.86rem;letter-spacing:.26em}
 }
 @media (max-width:640px){.runners{grid-template-columns:1fr 1fr;gap:12px}.runner-img{height:210px}.runner figcaption{padding:14px}.runner h3{font-size:1rem}.runner p{font-size:.85rem}}
+.screens{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.screens figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.screens img{width:100%;height:auto;aspect-ratio:9/16;object-fit:cover}
+@media (max-width:1000px){.screens{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.screens{grid-template-columns:1fr 1fr;gap:10px}}
